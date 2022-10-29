@@ -1,0 +1,69 @@
+<html>
+<head><h2 align="center" style="color:red"> Flight Booking</h2></head>
+<script>
+	function f(){
+		
+		if(document.getElementById("from").value==document.getElementById("to").value){
+			alert("Source City and Destination City should not be same");
+			document.getElementById("from").value="select";
+			document.getElementById("to").value="select";
+		}
+	}
+
+</script>
+<body style="background-color:lightgreen">
+<form>
+<style>
+	tr,td{
+		width:150px;
+		text-align:ccenter;
+		padding:15px
+	}
+</style>
+<table align="center" >
+<tr>
+	<td bgcolor="blue" style="color:white">Source City</td>
+	<td bgcolor="blue"><select name="from" id="from">
+		<option value="select">select</option>
+		<option value="New Delhi">New Delhi</option>
+		<option value="Mumbai">Mumbai</option>
+		<option value="Kolkata">Kolkata</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Banglore">Banglore</option>
+		</select></td>
+</tr>
+<tr>
+	<td bgcolor="blue" style="color:white">Destination City</td>
+	<td bgcolor="blue" style="width:200px"><select name="to" id="to">
+	<option value="select">select</option>
+	<option value="New Delhi">New Delhi</option>
+	<option value="Mumbai">Mumbai</option>
+	<option value="Kolkata">Kolkata</option>
+	<option value="Chennai">Chennai</option>
+	<option value="Banglore">Banglore</option>
+	
+	</select></td>
+</tr>
+<tr>
+	<td bgcolor="blue" style="color:white">Departure Date</td>
+	<td bgcolor="blue"><input type="date" name="depdate" id="depdate"></td>
+</tr>
+<tr>
+	<td bgcolor="blue" style="color:white">No. of Passengers</td>
+	<td bgcolor="blue"><select name="nopassengers" id="nopassengers">
+		<option value="select">select</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option></select>
+		</td>
+</tr>
+<tr>
+	<td  colspan=2 align="center"><input type="button" style="color:blue" onclick="f()" value="Search Flights"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
